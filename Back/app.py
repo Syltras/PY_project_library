@@ -6,7 +6,7 @@ from datetime import datetime, timedelta, date
 from sqlalchemy import func
 from .books_app import db, Book, Customer, Loan
 
-app = Flask(__name__, template_folder='front')
+app = Flask(__name__, template_folder='front/templates')
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///books.sqlite3'
 app.config['SECRET_KEY'] = "random string"
 CORS(app)
